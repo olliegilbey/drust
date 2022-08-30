@@ -1,31 +1,22 @@
+use std::io;
+
 fn main() {
-    // let _c = 'z';
-    // let _z = 'ℤ';
-    // let _heart_eyed_cat = '😻';
+    let a = [1, 2, 3, 4, 5];
 
-    // let mut tup = [500, 6, 1];
+    println!("Please enter an array index.");
 
-    // println!("{:?}", tup);
+    let mut index = String::new();
 
-    // let [x, y, z] = tup;
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
 
-    // println!("{}", y);
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered was not a number");
 
-    // println!("{}", tup.1);
+    let element = a[index];
 
-    // tup.1 = 500.1;
-
-    // println!("{}", tup.1);
-
-    // println!("{:?}", tup);
-
-    // let a = [1, 2, 3, 4, 5];
-    // println!("{}", a[6]);
-    println!("Hello from main!");
-    another_function();
-
-}
-
-fn another_function() {
-    println!("Another Function");
+    println!("The value of the element at index {index} is: {element}");
 }
