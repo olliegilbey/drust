@@ -1,18 +1,6 @@
-// fn main() {
-//     loop {
-//         println!("again!");
-//     }
-// }
-
-
 fn main() {
-    let mut number = 3;
-
-    while number != 0 {
-        println!("{}!", number);
-
-        number -= 1;
+    for number in (1..4).rev() {
+        println!("{number}!");
     }
-
     println!("LIFTOFF!!!");
 }
